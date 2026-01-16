@@ -20,6 +20,8 @@ document.getElementById("donateBtn").onclick = () => {
 
 const cards = document.querySelectorAll(".glass");
 
+
+
 cards.forEach(card => {
   card.addEventListener("mousemove", (e) => {
     const rect = card.getBoundingClientRect();
