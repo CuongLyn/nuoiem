@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Nuôi Cường 🍜</title>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+  <header class="header glass">
+    <h1>🍜 NUÔI CƯỜNG 🍜</h1>
+    <p>Người ăn mỳ tôm chuyên nghiệp. Đói thì phải được nuôi chứ!</p>
+  </header>
+
+  <section class="glass counter">
+    <div>
+      <span>💰 Đã nhận</span>
+      <strong id="received">0</strong> VNĐ
+    </div>
+    <div>
+      <span>🛒 Đã chi</span>
+      <strong id="spent">0</strong> VNĐ
+    </div>
+    <div>
+      <span>💎 Còn lại</span>
+      <strong id="remain">0</strong> VNĐ
+    </div>
+  </section>
+
+  <section class="glass">
+    <h2>🎯 Tại sao nên nuôi?</h2>
+    <ul>
+      <li>💡 Biến ý tưởng thành phần mềm</li>
+      <li>🤝 Hỗ trợ miễn phí, nhiệt tình</li>
+      <li>😂 Hài hước nhưng minh bạch</li>
+      <li>🔥 Làm xuyên đêm vì đam mê</li>
+    </ul>
+  </section>
+
+  <section class="glass compare">
+    <div class="bad">
+      <h3>❌ Người khác</h3>
+      <p>Sao kê đang xử lý… từ năm ngoái</p>
+    </div>
+    <div class="good">
+      <h3>✅ Cường Con</h3>
+      <p>Nhận tiền là báo liền, 1k cũng ghi</p>
+    </div>
+  </section>
+
+  <section class="glass donate">
+    <h2>💳 NUÔI NGAY!</h2>
+    <img src="img/qr2.jpg" alt="QR" />
+    <p>Vietcombank – Chủ TK: <b>Vũ Việt Cường</b></p>
+    <button id="donateBtn">🎁 EM MUỐN ĐƯỢC NUÔI</button>
+  </section>
+
+  <section class="glass game">
+    <h3>📊 Xem sao kê</h3>
+    <div class="game-box">
+      <a id="runBtn" href="#">XEM SAO KÊ</a>
+    </div>
+    <small>Bắt được nút thì mới xem 😈</small>
+  </section>
+
+  <footer class="glass footer">
+    <p>⚠️ Website mang tính hài hước – tiền donate là thật 😂</p>
+    <small>© 2025 By Cuong</small>
+  </footer>
+</div>
+
+<script src="app.js"></script>
+<script>
+const cards = document.querySelectorAll('.glass');
+
+cards.forEach(card => {
+  const maxRotate = 10;
+
+  function tilt(x, y, rect) {
+    const rotateX = ((y - rect.height / 2) / rect.height) * -maxRotate;
+    const rotateY = ((x - rect.width / 2) / rect.width) * maxRotate;
+
+    card.style.transform =
+      `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+  }
+
+  // Desktop
+  card.addEventListener('mousemove', e => {
+    const rect = card.getBoundingClientRect();
+    tilt(e.clientX - rect.left, e.clientY - rect.top, rect);
+  });
+
+  // Mobile
+  card.addEventListener('touchmove', e => {
+    const rect = card.getBoundingClientRect();
+    const touch = e.touches[0];
+    tilt(touch.clientX - rect.left, touch.clientY - rect.top, rect);
+  }, { passive: true });
+
+  // Reset
+  ['mouseleave', 'touchend', 'touchcancel'].forEach(evt => {
+    card.addEventListener(evt, () => {
+      card.style.transform =
+        'perspective(1000px) rotateX(0deg) rotateY(0deg)';
+    });
+  });
+});
+</script>
+
+</body>
+</html>
