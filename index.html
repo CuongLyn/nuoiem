@@ -4,17 +4,24 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Nuôi Cường 🍜</title>
+
   <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+  <div class="cursor" id="cursor"></div>
+
 <div class="container">
+
+  <!-- HEADER -->
   <header class="header glass">
     <h1>🍜 NUÔI CƯỜNG 🍜</h1>
-    <p>Người ăn mỳ tôm chuyên nghiệp. Đói thì phải được nuôi chứ!</p>
+    <p>Đói thì phải được nuôi chứ!</p>
+    <small>⚠️ Em hứa sao kê từng ly coffee nha ☕</small>
   </header>
 
+  <!-- COUNTER -->
   <section class="glass counter">
     <div>
       <span>💰 Đã nhận</span>
@@ -30,85 +37,187 @@
     </div>
   </section>
 
+  <!-- WHY -->
   <section class="glass">
-    <h2>🎯 Tại sao nên nuôi?</h2>
+    <h2>🎯 Tại sao nên nuôi Cường?</h2>
     <ul>
-      <li>💡 Biến ý tưởng thành phần mềm</li>
-      <li>🤝 Hỗ trợ miễn phí, nhiệt tình</li>
-      <li>😂 Hài hước nhưng minh bạch</li>
-      <li>🔥 Làm xuyên đêm vì đam mê</li>
+      <li>🍜 Mỳ tôm là thức ăn của lập trình viên</li>
+      <li>💡 Code được chạy bằng… calo</li>
+      <li>🤝 Hỗ trợ miễn phí, không seen-zone</li>
+      <li>😂 Hài hước nhưng sao kê rất nghiêm túc</li>
+      <li>🔥 Thức đêm fix bug vì… đói</li>
+      <li>🤑 Có thực mới vực được đạo</li>
     </ul>
   </section>
 
+  <!-- COMMIT -->
+  <section class="glass">
+    <h2>📜 Cam kết vàng của Cường khi được nuôi:</h2>
+    <ul>
+      <li>✅ Sao kê Realtime, Nhanh hơn tốc độ em húp mì tôm</li>
+      <li>✅ Chi tiết từng đồng, Omachi hay Hảo Hảo em đều ghi rõ, không lập lờ</li>
+      <li>✅ Không lặn, không “để mai”</li>
+      <li>✅ Chụp bill, quay vidieo cùng đồ ăn 4k không che</li>
+      <li>❌ Không dùng tiền mua siêu xe (chưa đủ)</li>
+    </ul>
+  </section>
+
+  <!-- MONEY FLOW -->
+  <section class="glass">
+    <h2>💸 Tiền donate đi đâu?</h2>
+    <p>
+      🍜 70% mỳ tôm + trứng + xúc xích <br>
+      ☕ 20% cà phê chống ngủ gật <br>
+      💻 10% học thêm kỹ năng mới <br>
+      ❤️ 0% cho người yêu (vì không có)
+    </p>
+  </section>
+
+  <!-- COMPARE -->
   <section class="glass compare">
     <div class="bad">
       <h3>❌ Người khác</h3>
-      <p>Sao kê đang xử lý… từ năm ngoái</p>
+      <p>Sao kê đang xử lý… từ Tết năm ngoái</p>
+      <p>File báo cáo mờ như nhìn qua camera đt em</p>
+      <p>Hỏi một câu là bị block vĩnh viễn</p>
+      <p>"Tiền đi đâu?" - "Em không biết ạ" 🙈</p>
+      <p>Donate xong là mất hút</p>
     </div>
     <div class="good">
-      <h3>✅ Cường</h3>
-      <p>Nhận tiền là báo liền, 1k cũng ghi</p>
+      <h3>✅ Cường:</h3>
+      <p>Sao kê NGAY, chưa kịp tiêu đã báo cáo</p>
+      <p>1k cũng ghi, không làm tròn cho sang</p>
+      <p>Inbox 2h sáng vẫn rep (Nếu đã được ăn 🍜)</p>
+      <p>Chi gì ghi nấy, khỏi đoán</p>
+      <p>Đổ xăng? Em vẫn đang đi bộ giảm cân</p>
     </div>
   </section>
 
-  <section class="glass donate">
-    <h2>💳 NUÔI NGAY!</h2>
-    <img src="img/qr2.jpg" alt="QR" />
-    <p>Vietcombank – Chủ TK: <b>Vũ Việt Cường</b></p>
-    <button id="donateBtn">🎁 EM MUỐN ĐƯỢC NUÔI</button>
+  <!-- LEVEL -->
+  <section class="glass">
+    <h2>🏆 Các mức Donte cho em Cường</h2>
+    <ul>
+      <li>🥉 10k – thêm 1 quả trứng</li>
+      <li>🥈 50k – có xúc xích ăn cho sang</li>
+      <li>🥇 100k – mỳ + cà phê tỉnh táo</li>
+      <li>👑 200k+ – Cường nhớ bạn suốt đời</li>
+    </ul>
   </section>
 
+  <!-- DONATE -->
+  <section class="glass donate">
+    <h2>💳 NUÔI NGAY – ĐỪNG NGẠI</h2>
+    <p>Quét QR = Em có mỳ ăn = Em qua cơn đói</p>
+    <img src="img/qr2.jpg" alt="QR Donate">
+    <p>🏦 Vietcombank</p>
+    <p>STK: 1027843314</p>
+    <p>Chủ tài khoản: <b>Vũ Việt Cường</b></p>
+    <button id="donateBtn">Nuôi bằng tiền, không nhận lời chúc miệng 😈</button>
+  </section>
+
+  <!-- GAME -->
   <section class="glass game">
-    <h3>📊 Xem sao kê</h3>
+    <h3>📊 Xem Sao Kê Chi Tiết</h3>
     <div class="game-box">
       <a id="runBtn" href="#">XEM SAO KÊ</a>
     </div>
-    <small>Bắt được nút thì mới xem 😈</small>
+    <small>Bắt được nút thì mới xem được 😏</small>
   </section>
 
+
+
+  <!-- FAQ -->
+  <section class="glass">
+    <h2>❓ FAQ</h2>
+    <p><b>Hỏi:</b> Nuôi Cường có lợi gì?</p>
+    <p><b>Đáp:</b> Tăng nhân phẩm + giúp đời bớt bug.</p>
+
+    <p><b>Hỏi:</b> Ít tiền thì nuôi sao?</p>
+    <p><b>Đáp:</b> 1k cũng là tình cảm.</p>
+
+    <p><b>Hỏi:</b> Không nuôi thì sao?</p>
+    <p><b>Đáp:</b> Không sao… nhưng Cường đói 🥲</p>
+  </section>
+
+  <!-- FOOTER -->
   <footer class="glass footer">
-    <p>⚠️ Website mang tính hài hước – tiền donate là thật 😂</p>
-    <small>© 2025 By Cuong</small>
+    <p>💖 Mỗi lượt nuôi là một dòng code được sống tiếp</p>
+    <p>⚠️ Website mang tính hài hước – tiền donate là thật</p>
+    <small>© 2025 – Nuôi Cường Project</small>
   </footer>
+
 </div>
 
+  <!-- MODAL -->
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>
+        🤗 Thông báo từ Cường
+      </h2>
+      <div class="modal-body">
+        <p><b>Cường bảo:</b> Sao kê này "NẶNG" lắm, điện thoại thông thường không gánh nổi đâu! 😅</p>
+        <hr>
+        <p>Hãy mở bằng Iphone 17 prm 📱 không thì bằng máy tính (PC) để có thể được xem chi tiết nhé! 🖥️</p>
+      </div>
+    </div>
+  </div>
+
 <script src="app.js"></script>
+
 <script>
 const cards = document.querySelectorAll('.glass');
-
 cards.forEach(card => {
-  const maxRotate = 10;
+  
+
+  const maxRotate = 8;
 
   function tilt(x, y, rect) {
     const rotateX = ((y - rect.height / 2) / rect.height) * -maxRotate;
     const rotateY = ((x - rect.width / 2) / rect.width) * maxRotate;
-
     card.style.transform =
       `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
   }
 
-  // Desktop
   card.addEventListener('mousemove', e => {
     const rect = card.getBoundingClientRect();
     tilt(e.clientX - rect.left, e.clientY - rect.top, rect);
   });
 
-  // Mobile
-  card.addEventListener('touchmove', e => {
-    const rect = card.getBoundingClientRect();
-    const touch = e.touches[0];
-    tilt(touch.clientX - rect.left, touch.clientY - rect.top, rect);
-  }, { passive: true });
-
-  // Reset
-  ['mouseleave', 'touchend', 'touchcancel'].forEach(evt => {
-    card.addEventListener(evt, () => {
-      card.style.transform =
-        'perspective(1000px) rotateX(0deg) rotateY(0deg)';
-    });
+  card.addEventListener('mouseleave', () => {
+    card.style.transform = 'perspective(1000px) rotateX(0) rotateY(0)';
   });
 });
 </script>
 
 </body>
 </html>
+
+
+<script>
+const cursor = document.getElementById("cursor");
+
+document.addEventListener("mousemove", e => {
+  // Di chuyển chấm chính
+  cursor.style.left = e.clientX + "px";
+  cursor.style.top = e.clientY + "px";
+
+  // Tạo vệt theo sau
+  const trail = document.createElement("div");
+  trail.className = "cursor-trail";
+  trail.style.left = e.clientX + "px";
+  trail.style.top = e.clientY + "px";
+
+  // random chiều sâu 3D
+  trail.style.transform =
+    `translate(-50%, -50%) rotateY(${Math.random()*60 - 30}deg) rotateX(${Math.random()*60 - 30}deg)`;
+
+  document.body.appendChild(trail);
+
+  // tự hủy
+  setTimeout(() => {
+    trail.remove();
+  }, 600);
+});
+</script>
+
