@@ -139,7 +139,7 @@ cards.forEach(card => {
 
 
 /* ==== FLOATING ICON EFFECT ==== */
-const icons = ["🍜","☕","💻","💖","🔥","✨","🧠"];
+const icons = ["🍜","☕","💻","💖","🔥","✨","🧠", "💵", "💸"];
 
 function spawnIcon(x, y) {
   const icon = document.createElement("div");
@@ -153,6 +153,15 @@ function spawnIcon(x, y) {
 
   setTimeout(() => icon.remove(), 1200);
 }
+
+// Bay icon lên liên tục từ mọi vị trí trên màn hình
+window.addEventListener("load", () => {
+  setInterval(() => {
+    const x = Math.random() * window.innerWidth;
+    const y = Math.random() * window.innerHeight;
+    spawnIcon(x, y);
+  }, 100); // Bay icon mỗi 100ms
+});
 
 /* hover card */
 document.querySelectorAll(".glass").forEach(card => {
