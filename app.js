@@ -6,6 +6,32 @@ const receivedEl = document.getElementById("received");
 const spentEl = document.getElementById("spent");
 const remainEl = document.getElementById("remain");
 
+/* ==== COPY STK ==== */
+document.addEventListener("DOMContentLoaded", () => {
+  const copyStkBtn = document.getElementById("copyStkBtn");
+  const stkNumber = document.getElementById("stkNumber");
+  
+  if (copyStkBtn && stkNumber) {
+    copyStkBtn.addEventListener("click", () => {
+      const stkText = stkNumber.textContent;
+      
+      navigator.clipboard.writeText(stkText).then(() => {
+        // Thay đổi nút để hiển thị đã sao chép
+        copyStkBtn.classList.add("copied");
+        copyStkBtn.textContent = "✓";
+        
+        // Quay lại sau 2 giây
+        setTimeout(() => {
+          copyStkBtn.classList.remove("copied");
+          copyStkBtn.textContent = "📋";
+        }, 2000);
+      }).catch(() => {
+        alert("Sao chép không thành công!");
+      });
+    });
+  }
+});
+
 /* ==== ANIMATE NUMBER ==== */
 function animateNumber(el, from, to, duration = 700) {
   const start = performance.now();

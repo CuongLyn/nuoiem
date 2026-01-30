@@ -407,3 +407,28 @@ button:hover {
 .modal-body::-webkit-scrollbar-thumb:hover {
   background: rgba(0, 255, 204, 0.6);
 }
+/* ================= COPY BUTTON ================= */
+.copy-btn {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  padding: 2px 8px;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.copy-btn:hover {
+  background: rgba(0, 255, 204, 0.2);
+  transform: scale(1.15);
+}
+
+.copy-btn:active {
+  transform: scale(0.95);
+}
+
+.copy-btn.copied {
+  background: rgba(0, 255, 204, 0.4);
+}
